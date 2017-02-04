@@ -13,40 +13,79 @@ class Tracker {
         days = [Day]()
     }
     
-    func addDay(day:Day)-> Day{
+    func addDay(day:Day){
         days.append(day)
-        return day
     }
     
-    func calculateStudyingTotalTime() -> Int {
-        return 5
+    func returnDayNumber() -> Int{
+        return days.count
     }
     
-    func calculateSocializingTotalTime() -> Int {
-        return 5
+    func calculateLastSevenDays(){
+        
     }
     
-    func calculateElectronicsTotalTime() -> Int {
-        return 5
+    func calculateStudyingTotalTime() -> Double {
+        var totalStudyingTime:Double = 0
+        for day in days {
+            totalStudyingTime += day.studyingHours
+        }
+        return totalStudyingTime
     }
     
-    func calculateSleepingTotalTime() -> Int {
-        return 5
+    func calculateSocializingTotalTime() -> Double {
+        var totalSocializingTime:Double = 0
+        for day in days {
+            totalSocializingTime += day.socializingHours
+        }
+        return totalSocializingTime
     }
     
-    func calculateStudyingAverageTime() -> Int {
-        return 5
+    func calculateElectronicsTotalTime() -> Double {
+        var totalElectronicsTime:Double = 0
+        for day in days {
+            totalElectronicsTime += day.electronicsHours
+        }
+        return totalElectronicsTime
     }
     
-    func calculateSocializingAverageTime() -> Int {
-        return 5
+    func calculateSleepingTotalTime() -> Double {
+        var totalSleepingTime:Double = 0
+        for day in days {
+            totalSleepingTime += day.sleepingHours
+        }
+        return totalSleepingTime
     }
     
-    func calculateElectronicsAverageTime() -> Int {
-        return 5
+    func calculateStudyingAverageTime() -> Double {
+        var totalStudyingTime:Double = 0
+        for day in days {
+            totalStudyingTime += day.studyingHours
+        }
+        return totalStudyingTime/Double(days.count)
     }
     
-    func calculateSleepingAverageTime() -> Int {
-        return 5
+    func calculateSocializingAverageTime() -> Double {
+        var totalSocializingTime:Double = 0
+        for day in days {
+            totalSocializingTime += day.socializingHours
+        }
+        return totalSocializingTime/Double(days.count)
+    }
+    
+    func calculateElectronicsAverageTime() -> Double {
+        var totalElectronicsTime:Double = 0
+        for day in days {
+            totalElectronicsTime += day.electronicsHours
+        }
+        return totalElectronicsTime/Double(days.count)
+    }
+    
+    func calculateSleepingAverageTime() -> Double {
+        var totalSleepingTime:Double = 0
+        for day in days {
+            totalSleepingTime += day.sleepingHours
+        }
+        return totalSleepingTime/Double(days.count)
     }
 }

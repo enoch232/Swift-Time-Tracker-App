@@ -8,12 +8,12 @@
 
 import Foundation
 class Day {
-    var studyingHours:Int
-    var socializingHours:Int
-    var electronicsHours:Int
-    var sleepingHours:Int
+    var studyingHours:Double
+    var socializingHours:Double
+    var electronicsHours:Double
+    var sleepingHours:Double
     
-    init(studyingHours:Int, socializingHours:Int, electronicsHours:Int, sleepingHours:Int ){
+    init(studyingHours:Double, socializingHours:Double, electronicsHours:Double, sleepingHours:Double ){
         self.studyingHours = studyingHours
         self.socializingHours = socializingHours
         self.electronicsHours = electronicsHours

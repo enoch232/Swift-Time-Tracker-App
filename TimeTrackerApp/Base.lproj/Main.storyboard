@@ -228,6 +228,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1s-go-Zkq">
+                                <rect key="frame" x="42" y="287" width="272" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -239,6 +246,7 @@
                         <outlet property="daysLabel" destination="CkR-Gp-dcE" id="aNl-gn-2rI"/>
                         <outlet property="electronicsLabel" destination="rbm-mi-52Z" id="diR-lC-CAC"/>
                         <outlet property="electronicsTextfield" destination="j1D-5i-FXZ" id="MIO-MZ-H9c"/>
+                        <outlet property="notificationLabel" destination="z1s-go-Zkq" id="jch-DI-fvZ"/>
                         <outlet property="sleepingLabel" destination="96e-rz-C82" id="ejW-ww-Ikh"/>
                         <outlet property="sleepingTextfield" destination="QEd-cc-wzM" id="deR-Xl-WMe"/>
                         <outlet property="socializingLabel" destination="B92-L4-PpZ" id="0vF-Vr-hMA"/>

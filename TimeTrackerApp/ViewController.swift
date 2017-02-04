@@ -23,19 +23,64 @@ class ViewController: UIViewController {
     @IBOutlet weak var averageSocializingLabel: UILabel!
     @IBOutlet weak var averageElectronicsLabel: UILabel!
     @IBOutlet weak var averageSleepingLabel: UILabel!
+    @IBOutlet weak var notificationLabel: UILabel!
+    
+    var trackerApp:Tracker = Tracker()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        studyTextfield.text = "0"
+        socializingTextfield.text = "0"
+        electronicsTextfield.text = "0"
+        sleepingTextfield.text = "0"
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        self.studyTextfield.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     @IBAction func saveButton(_ sender: UIButton) {
+        let studyingHours = Double(studyTextfield.text!)!
+        let socializingHours = Double(studyTextfield.text!)!
+        let electronicsHours = Double(studyTextfield.text!)!
+        let sleepingHours = Double(studyTextfield.text!)!
+        let newDay:Day = Day(studyingHours: studyingHours, socializingHours: socializingHours, electronicsHours: electronicsHours, sleepingHours: sleepingHours )
+        trackerApp.addDay(day: newDay)
+        notificationLabel.text = "New Day was added successfully!"
+        studyTextfield.text = "0"
+        socializingTextfield.text = "0"
+        electronicsTextfield.text = "0"
+        sleepingTextfield.text = "0"
+        
+        daysLabel.text = String(trackerApp.returnDayNumber())
+        studyingLabel.text = String(trackerApp.calculateStudyingTotalTime())
+        socializingLabel.text = String(trackerApp.calculateSocializingTotalTime())
+        electronicsLabel.text = String(trackerApp.calculateElectronicsTotalTime())
+        sleepingLabel.text = String(trackerApp.calculateSleepingTotalTime())
+        
+        averageStudyingLabel.text = String(trackerApp.calculateStudyingAverageTime())
+        averageSocializingLabel.text = String(trackerApp.calculateSocializingAverageTime())
+        averageElectronicsLabel.text = String(trackerApp.calculateElectronicsAverageTime())
+        averageSleepingLabel.text = String(trackerApp.calculateSleepingAverageTime())
+        
+
+        
     }
 
     @IBAction func clearButton(_ sender: UIButton) {
+        studyTextfield.text = "0"
+        socializingTextfield.text = "0"
+        electronicsTextfield.text = "0"
+        sleepingTextfield.text = "0"
+        
     }
 
 }
