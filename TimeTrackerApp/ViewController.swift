@@ -9,8 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var studyTextfield: UITextField!
+    @IBOutlet weak var studyingTextfield: UITextField!
     @IBOutlet weak var socializingTextfield: UITextField!
     @IBOutlet weak var electronicsTextfield: UITextField!
     @IBOutlet weak var sleepingTextfield: UITextField!
@@ -28,13 +27,13 @@ class ViewController: UIViewController {
     var trackerApp:Tracker = Tracker()
     override func viewDidLoad() {
         super.viewDidLoad()
-        studyTextfield.text = "0"
+        studyingTextfield.text = "0"
         socializingTextfield.text = "0"
         electronicsTextfield.text = "0"
         sleepingTextfield.text = "0"
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        self.studyTextfield.becomeFirstResponder()
+        self.studyingTextfield.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,14 +47,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
-        let studyingHours = Double(studyTextfield.text!)!
-        let socializingHours = Double(studyTextfield.text!)!
-        let electronicsHours = Double(studyTextfield.text!)!
-        let sleepingHours = Double(studyTextfield.text!)!
+        let studyingHours = Double(studyingTextfield.text!)!
+        let socializingHours = Double(socializingTextfield.text!)!
+        let electronicsHours = Double(electronicsTextfield.text!)!
+        let sleepingHours = Double(sleepingTextfield.text!)!
         let newDay:Day = Day(studyingHours: studyingHours, socializingHours: socializingHours, electronicsHours: electronicsHours, sleepingHours: sleepingHours )
         trackerApp.addDay(day: newDay)
         notificationLabel.text = "New Day was added successfully!"
-        studyTextfield.text = "0"
+        studyingTextfield.text = "0"
         socializingTextfield.text = "0"
         electronicsTextfield.text = "0"
         sleepingTextfield.text = "0"
@@ -76,7 +75,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func clearButton(_ sender: UIButton) {
-        studyTextfield.text = "0"
+        studyingTextfield.text = "0"
         socializingTextfield.text = "0"
         electronicsTextfield.text = "0"
         sleepingTextfield.text = "0"

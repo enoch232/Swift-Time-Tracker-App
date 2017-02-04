@@ -21,10 +21,6 @@ class Tracker {
         return days.count
     }
     
-    func calculateLastSevenDays(){
-        
-    }
-    
     func calculateStudyingTotalTime() -> Double {
         var totalStudyingTime:Double = 0
         for day in days {
