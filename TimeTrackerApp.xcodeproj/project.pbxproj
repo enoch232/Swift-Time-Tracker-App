@@ -13,6 +13,7 @@
 		7BF63A261E4597CA00BB14D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF63A251E4597CA00BB14D3 /* Assets.xcassets */; };
 		7BF63A291E4597CA00BB14D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF63A271E4597CA00BB14D3 /* LaunchScreen.storyboard */; };
 		7BF63A311E459C6500BB14D3 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF63A301E459C6500BB14D3 /* Day.swift */; };
+		7BF63A331E459DD300BB14D3 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF63A321E459DD300BB14D3 /* Tracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7BF63A281E4597CA00BB14D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BF63A2A1E4597CA00BB14D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BF63A301E459C6500BB14D3 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		7BF63A321E459DD300BB14D3 /* Tracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7BF63A271E4597CA00BB14D3 /* LaunchScreen.storyboard */,
 				7BF63A2A1E4597CA00BB14D3 /* Info.plist */,
 				7BF63A301E459C6500BB14D3 /* Day.swift */,
+				7BF63A321E459DD300BB14D3 /* Tracker.swift */,
 			);
 			path = TimeTrackerApp;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF63A331E459DD300BB14D3 /* Tracker.swift in Sources */,
 				7BF63A211E4597CA00BB14D3 /* ViewController.swift in Sources */,
 				7BF63A1F1E4597CA00BB14D3 /* AppDelegate.swift in Sources */,
 				7BF63A311E459C6500BB14D3 /* Day.swift in Sources */,
